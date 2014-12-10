@@ -26,6 +26,7 @@ struct FactBook {
     var unsignedArrayCount = UInt32(factsArray.count)
     var unsignedRandomNumber = arc4random_uniform(unsignedArrayCount)
     var randomNumber = Int(unsignedRandomNumber)
+    
     return factsArray[randomNumber]
   }
 }
