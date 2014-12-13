@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>TEST</title>
+<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+</head>
+<body>
+
+<script>
+
+// BASIC
+var code = '{ "name": "Anne", "gender": "female" }';
+var obj = JSON.parse(code);
+console.log( obj.name );
+
+
+// PARSE FROM A FILE USING NATIVE JAVASCRIPT
+var readJson = function(file) {
+  var request = new XMLHttpRequest();
+  request.open('GET', file, false);
+  request.send(null);
+  if ( request.status == 200 ) {
+    return request.responseText;
+  }
+}
+
+var temp = readJson('names.json');
+console.log(temp)
+
+
+// PARSE FROM A FILE USING JQUERY
+var printJson = function(data) {
+  $.each(data, function( key,val ){
+    console.log( key,val );
+  })
+}
+
+$.getJSON( "names.json", function(data){
+  printJson(data)
+})
+
+// ANOTHER WAY
+$.ajax({
+  dataType: "json",
+  url: "names.json",
+  success: function(response) {
+    printJson(response);
+  }
+})
+
+
+</script>
+  
+</body>
+</html>
