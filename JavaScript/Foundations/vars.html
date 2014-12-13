@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Vars</title>
+</head>
+<body>
+
+<div id="myDiv"></div>
+
+<script>
+
+// // SCOPE
+// var world = "World!";
+// function sayHello() {
+//   var hello = "Hello ";
+//   function inner() {
+//     var extra = " There is more!"
+//     console.log(hello + world + extra);
+//   }
+//   inner();
+// }
+// sayHello()
+
+// // SHADOWING
+// var myColor = "blue";
+// var myNumber = 10;
+// console.log("myColor before myFunc():", myColor)
+// function myFunc () {
+//   var myColor = "yellow";
+//   myNumber = 42; // global variable is changed here
+//   console.log("myColor inside myFunc():", myColor);
+// }
+// myFunc();
+// console.log(myColor, myNumber)
+
+// HOISTING
+function doSomething (doit) {
+  var color = "blue";
+  if(doit) {
+    color = "red";
+    var number = 10; // this is hoisted to the beginning
+    console.log("Color in if:", color);
+  }
+  console.log("Color after if:", color, number);
+}
+doSomething(true);
+doSomething(false);
+
+
+</script>
+</body>
+</html>
