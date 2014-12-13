@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Strings</title>
+</head>
+<body>
+<script>
+
+var whole = "Hello world!";
+var world = whole.substr(6,5);
+var hello = whole.substr(0,5);
+console.log(world, whole.toLowerCase());
+console.log(whole.toUpperCase());
+console.log(whole.charAt(0));
+
+// COMPARE
+var first = "Hello", second = "hello"
+if (first === second) {
+  console.log('same')
+} else {
+  console.log('different')
+}
+var result = (first === second ? "same" : "diffrent")  
+console.log(result)
+
+function compare(a,b) {
+  console.log(a + "<=" + b, a <= b)
+}
+compare('a', 'b')
+compare('a', 'B')
+compare('app', 'apples')
+compare('[',']')
+compare('hello','Hello')
+
+</script>
+</body>
+</html>
