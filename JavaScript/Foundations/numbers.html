@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Numbers</title>
+</head>
+<body>
+<script>
+console.log( parseInt("019", 10) ); // 19
+console.log( parseInt("010111", 2) ); // 23
+console.log( parseInt("2300 people", 10) ); // 2300
+console.log( parseInt("there are 2300 people", 10) ); // NaN
+
+// check if it is a NaN
+var myVar = parseInt("there are 2300 people", 10);
+console.log( isNaN(myVar) ); //2300
+
+// parse float
+var m = parseFloat("123.456 is a strange number");
+console.log(m); // 123.456
+
+// Math Object
+var u = Math.round(Math.random() * 10);
+var v = Math.round(2.5); // 3
+var w = Math.floor(3.7); // 3
+var x = Math.ceil(6.2); // 7
+
+var y = Math.pow(10, 5); // 100000
+var z = Math.sqrt(4); // 2
+
+</script>
+</body>
+</html>
