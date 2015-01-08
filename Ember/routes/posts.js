@@ -1,11 +1,8 @@
 Blogger.PostsRoute = Ember.Route.extend({
-	renderTemplate: function(){
-		var controller = this.controllerFor('posts');
-
-		this.render('posts', {
-			outlet: 'posts',
-			controller: controller
-		});
+	// The default properties of an Ember Controller
+	controllerName: 'posts',
+	renderTemplate: function() {
+		this.render('posts');
 	},
 	model: function() {
 		return posts;

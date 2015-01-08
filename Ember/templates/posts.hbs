@@ -1,6 +1,6 @@
 <h1>Dracula's Blog</h1>
 <ul>
-	{{#each}}
-	<li></li>
+	{{#each post in model}}
+	<li>{{post.title}}</li>
 	{{/each}}
 </ul>
