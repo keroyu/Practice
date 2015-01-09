@@ -1,6 +1,8 @@
 <h1>Dracula's Blog</h1>
 <ul>
-	{{#each post in model}}
-	<li>{{post.title}}</li>
+	{{#each}}
+	<li>{{#link-to 'post' this.id}}{{title}}{{/link-to}}</li>
 	{{/each}}
 </ul>
+
+<p><a href="#" {{action 'sortByTitle'}}>Sort by Title</a></p>
