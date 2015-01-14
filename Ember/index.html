@@ -9,6 +9,8 @@
 	<script src="libs/handlebars-v2.0.0.js"></script>
 	<script src="libs/ember.js"></script>
 	<script src="libs/ember-handlebars-loader.js"></script>
+	<script src="libs/ember-data.js"></script>
+	<script src="libs/localstorage_adapter.js"></script>
 
 	<script src="blogger.js"></script>
 	<script src="router.js"></script>
@@ -18,12 +20,16 @@
 	<script src="controllers/contact.js"></script>
 	<script src="controllers/posts.js"></script>
 	<script src="controllers/post.js"></script>
+	<script src="controllers/new-post.js"></script>
 
 	<script src="routes/posts.js"></script>
 	<script src="routes/post.js"></script>
 
+	<script src="models/post.js"></script>
+	<script src="models/comment.js"></script>
+
 	<script>
-	EmberHandlebarsLoader.loadTemplates(['application', 'posts', 'post', 'about', 'contact', 'phone', 'email']);
+	EmberHandlebarsLoader.loadTemplates(['application', 'posts', 'post', 'about', 'contact', 'phone', 'email', 'new-post']);
 	</script>
 </head>
 <body>
