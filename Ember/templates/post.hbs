@@ -1,7 +1,7 @@
 <h1>{{title}}</h1>
 
 {{#if isEditing}}
-	<form action="">
+	<form>
 		<div class="form-group">
 			<label for="title">Title</label>
 			{{input id="title" class="form-control" value=title}}
@@ -15,4 +15,5 @@
 {{else}}
 <p>{{body}}</p>
 <button class="btn btn-primary" {{action 'edit'}}>Edit</button>
+<button class="btn btn-danger" {{action 'delete'}}>Delete</button>
 {{/if}}
